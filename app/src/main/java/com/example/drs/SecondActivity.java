@@ -84,7 +84,7 @@ public class SecondActivity extends FragmentActivity implements View.OnTouchList
 
         RLayoutLast = (RelativeLayout.LayoutParams) frgLayout.getLayoutParams();
         frgLayout.setLayoutParams(RLayoutLast);
-        presenter = new Presenter(new ModuleApp(new MoveView(), new ScalingView(1, 1), RLayoutLast,getWindowManager().getDefaultDisplay().getHeight()));
+        presenter = new Presenter(new ModuleApp(new MoveView(), new ScalingView(1, 1), RLayoutLast, getWindowManager().getDefaultDisplay().getHeight()));
         progressBar.setOnSeekBarChangeListener(this);
         frgLayout.setOnTouchListener(this);
 
@@ -105,6 +105,10 @@ public class SecondActivity extends FragmentActivity implements View.OnTouchList
 
     }
 
+    @OnClick(R.id.btnList)
+    void startListActivity() {
+        startActivity(new Intent(SecondActivity.this, ListActivity.class));
+    }
 
     @OnClick(R.id.btnCamera)
     void startCamera() {

@@ -35,7 +35,6 @@ public class Presenter {
 
     ModuleApp moduleApp;
     SecondActivity activity;
-    Uri mImageUri;
 
 
     public Presenter(ModuleApp moduleApp) {
